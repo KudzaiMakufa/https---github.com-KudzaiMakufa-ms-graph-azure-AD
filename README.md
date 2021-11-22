@@ -4,7 +4,7 @@ Flask based web app to implent single sign on and access microsft graph via azur
 
 <h4>Intall dependencies</h4>
 <ol>
-  <li><h6>Check if python is installed </h6><li>
+  <h6>Check if python is installed </h6>
   <li><code>python -V</code><li>
   <li><h6>Install requirements </h6><li>
   <li><code>pip install -r requirements.txt</code><li>
