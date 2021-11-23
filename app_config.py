@@ -2,8 +2,8 @@
 from os import environ
 # CLIENT_SECRET=environ.get('CLIENT_SECRET')
 # CLIENT_ID=environ.get('CLIENT_ID')
-CLIENT_SECRET="eHz7Q~71YEmK-TGrKTzAZ02opN2ohsE6ad9~e"
-CLIENT_ID="c8881966-1379-4a8e-8dbf-c3c74c926ab1"
+CLIENT_SECRET=""
+CLIENT_ID=""
 
 
  # Placeholder - for use ONLY during testing.
