@@ -2,7 +2,7 @@
 Flask based web app to implent single sign on and access microsft graph via azure active directory
 
 
-<h4>Intall dependencies</h4>
+<h4>Install dependencies</h4>
 <ol>
   <li><h6>Check if python is installed </h6></li>
   <code>python -V</code>
