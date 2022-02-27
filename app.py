@@ -65,7 +65,31 @@ def graphcall():
         app_config.ENDPOINT,
         headers={'Authorization': 'Bearer ' + token['access_token']},
         ).json()
+    print(graph_data)
     return render_template('display.html', result=graph_data)
+
+@app.route("/usercount")
+def user_count():
+    token = _get_token_from_cache(app_config.SCOPE)
+
+    if not token:
+        return redirect(url_for("login"))
+    # graph_data = requests.get(  # Use token to call downstream service
+    #     app_config.ENDPOINT,
+    #     headers={'Authorization': 'Bearer ' + token['access_token']},
+    #     ).json()
+
+    # userprinciple  = graph_data['value'][0]['userPrincipalName'] 
+
+    get_permission = requests.get(  # Use token to call downstream service
+        app_config.USERCOUNT +"/me/messages",
+        headers={'Authorization': 'Bearer ' + token['access_token']},
+        ).json()
+    # id  = graph_data['value']['id']
+    
+    # print(graph_data.id + " " + graph_data.userPrincipalName)
+    print(get_permission)
+    return render_template('display.html', result=get_permission)
 
 
 def _load_cache():
